@@ -20,7 +20,6 @@ class CreateNovedadesTable extends Migration
             $table->date('fin_novedad');
 
             $table->foreignId('empleado_id')->constrained('empleados');
-            $table->foreignId('nomina_id')->constrained('nominas');
             $table->timestamps();
         });
     }

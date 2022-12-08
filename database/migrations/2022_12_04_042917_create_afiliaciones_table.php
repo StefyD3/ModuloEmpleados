@@ -20,7 +20,7 @@ class CreateAfiliacionesTable extends Migration
             $table->string('razon_social_ccf');
             $table->string('razon_social_afp');
 
-
+            $table->foreignId('empleado_id')->constrained('empleados');
            $table->timestamps();
         });
     }

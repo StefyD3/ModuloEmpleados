@@ -19,8 +19,15 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.component('clientes-component', require('./components/ClientesComponent.vue').default);
+Vue.component('empleados-component', require('./components/EmpleadosComponent.vue').default);
+Vue.component('cargos-component', require('./components/CargosComponent.vue').default);
+Vue.component('afiliaciones-component', require('./components/AfiliacionesComponent.vue').default);
+Vue.component('saluds-component', require('./components/SaludsComponent.vue').default);
+Vue.component('riesgos-component', require('./components/RiesgosComponent.vue').default);
+Vue.component('pensiones-component', require('./Pensiones/ExampleComponent.vue').default);
+Vue.component('ccompensaciones-component', require('./components/CcompensacionesComponent.vue').default);
+Vue.component('novedades-component', require('./components/NovedadesComponent.vue').default);
+Vue.component('nomina-component', require('./components/NominaComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

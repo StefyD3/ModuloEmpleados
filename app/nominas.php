@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class nominas extends Model
+class Nominas extends Model
 {
     //
 }

@@ -15,9 +15,11 @@ class CreateNominasTable extends Migration
     {
         Schema::create('nominas', function (Blueprint $table) {
             $table->id();
-            $table->date('inicio_nomina');
-            $table->date('fin_nomina');
+            $table->integer('cedula_empleado')->unique;
+            $table->date('fecha_inicio');
+            $table->date('fecha_fin');
 
+            $table->foreignId('novedad_id')->constrained('novedades');
             $table->timestamps();
         });
     }

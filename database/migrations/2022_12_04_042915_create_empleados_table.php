@@ -22,9 +22,6 @@ class CreateEmpleadosTable extends Migration
             $table->string('telefono');
             $table->date('fecha_nacimiento')->nullable();
             $table->date('fecha_ingreso');
-
-            $table->foreignId('cargo_id')->constrained('cargos');
-            $table->foreignId('afiliacion_id')->constrained('afiliaciones');
             $table->timestamps();
         });
     }

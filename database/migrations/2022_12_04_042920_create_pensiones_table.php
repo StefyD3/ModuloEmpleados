@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRiesgosTable extends Migration
+class CreatePensionesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,16 @@ class CreateRiesgosTable extends Migration
      */
     public function up()
     {
-        Schema::create('riesgos', function (Blueprint $table) {
+        Schema::create('pensiones', function (Blueprint $table) {
             $table->id();
             $table->integer('nit')->unique;
             $table->string('razon_social', 100);
             $table->string('dirección');
             $table->integer('telefono');
-            $table->string('tipo-riesgo');
             $table->date('fecha_afiliacion');
+
+            $table->foreignId('afiliacion_id')->constrained('afiliaciones');
             $table->timestamps();
-            
         });
     }
 
@@ -33,6 +33,6 @@ class CreateRiesgosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('riesgos');
+        Schema::dropIfExists('pensiones');
     }
 }

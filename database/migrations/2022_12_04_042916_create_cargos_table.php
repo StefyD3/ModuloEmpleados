@@ -17,6 +17,8 @@ class CreateCargosTable extends Migration
             $table->id();
             $table->string('nombre');
             $table->string('descripcion');
+
+            $table->foreignId('empleado_id')->constrained('empleados');
             $table->timestamps();
         });
     }
